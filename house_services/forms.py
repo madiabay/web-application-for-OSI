@@ -30,7 +30,7 @@ class UserCreationFormmm(forms.ModelForm):
 
     class Meta:
         model = models.CustomUser
-        fields = ("email", 'first_name', 'last_name')
+        fields = ("email", 'first_name', 'last_name', 'user_type')
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
