@@ -1,0 +1,38 @@
+{% extends 'house_services/base.html' %}
+
+{% block nots_table %}
+<style>
+    h2 {
+      color: red;
+      text-align: center;
+    }
+</style>
+<h2>Notifications</h2>
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">{{ nots.title }}</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+        <td>@fat</td>
+      </tr>
+    </tbody>
+  </table>
+{% endblock nots_table %}

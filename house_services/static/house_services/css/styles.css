@@ -1,0 +1,54 @@
+/* Split the screen in half */
+.split {
+	height: 100%;
+	width: 65%;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	overflow-x: hidden;
+	padding-top: 20px;
+  }
+  
+  /* Control the left side */
+  .left {
+	left: 0;
+	background-color: #ffffff;
+  }
+  
+  /* Control the right side */
+  .right {
+	right: 0;
+	background-color: rgb(197, 204, 193);
+  }
+  
+  /* If you want the content centered horizontally and vertically */
+  .centered table {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+  }
+
+  /* my own */
+  .second-part table {
+	width: 100%; /* This will make the table take up the full width of the second part */
+	height: 100%; /* This will make the table take up the full height of the second part */
+	text-align: center;
+  }
+
+  .centered2 {
+	position: absolute;
+	top: 50%;
+	left: 30%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+  }
+  
+  /* Style the image inside the centered container, if needed */
+  .centered img {
+	width: 150px;
+	border-radius: 50%;
+  }

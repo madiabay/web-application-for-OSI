@@ -5,6 +5,8 @@ from django.utils.translation import gettext_lazy as _
 
 from users import models
 
+from .models import House_service
+
 
 class UserCreationFormmm(forms.ModelForm):
     """
@@ -66,3 +68,11 @@ class UserCreationFormmm(forms.ModelForm):
         if commit:
             user.save()
         return user
+
+
+
+class NotificationForm(forms.ModelForm):
+
+    class Meta:
+        model = House_service
+        fields = ('title', 'description', 'main_image')
