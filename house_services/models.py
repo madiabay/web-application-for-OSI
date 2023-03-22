@@ -2,6 +2,8 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 from . import choices
+from users import choices as user_choices
+from django.contrib.auth import get_user_model
 
 
 class House_service(models.Model):
@@ -15,6 +17,13 @@ class House_service(models.Model):
         max_length=50,
         choices=choices.NoteTypeChoices.choices,
         default=choices.NoteTypeChoices.New
+    )
+
+    author = models.ForeignKey(
+        to=get_user_model(),
+        on_delete=models.PROTECT,
+        related_name='nots',
+        limit_choices_to={'user_type': user_choices.UserTypeChoices.Liver}
     )
 
     created_at = models.DateTimeField(auto_now_add=True)

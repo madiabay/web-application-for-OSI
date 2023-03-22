@@ -21,9 +21,10 @@ urlpatterns = [
     path('register/', views.RegisterUser.as_view(), name='register'),
     path('login/', views.LoginUser.as_view(), name='login'),
 
-    path('', views.index, name='home'),
+    path('', views.MyView.as_view(), name='home'),
 
-    path('add_nots/', views.AddNotification.as_view(), name='add_nots'),
+    # path('add_nots/', views.AddNotification.as_view(), name='add_nots'),
+    path('add_nots/<int:user_id>/', views.addnots, name='add_nots'),
 
     path('ajax/getUsers', views.getUsers, name='getUsers'),
 ]
